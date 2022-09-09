@@ -1,0 +1,229 @@
+!
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/2f445145ab.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/estiloalojamiento.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,800&display=swap" rel="stylesheet" >
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <script src="js/vuelos.js"></script>
+  
+  <title>Alojamiento</title>
+</head>
+
+<body>
+
+  <nav>
+    <div class="titulo">
+      <h1 class="titu">A.G VUELOS</h1>
+      <img src="img/A.G VUELOS.png" alt="" class="logo">
+
+    </div>
+    <ul>
+      <li><i class="fa-solid fa-house"></i><a href="index.html">Inicio</a></li>
+      <li><i class="fa-solid fa-cart-flatbed-suitcase"></i><a href="alojamiento.html">Reservas</a></li>
+      <li><i class="fa-solid fa-sack-dollar"></i><a href="descuentos.html">Descuentos</a></li>
+      <li><i class="fa-solid fa-user-gear"></i><a href="indexCliente.html">Ayuda</a></li>
+      <li>
+        <h3><i class="fa-solid fa-user-lock"></i><a class="active" href="iniciosession.html">Iniciar Sesion</a></h3>
+      </li>
+    </ul>
+
+  </nav>
+  <section class="section-padding">
+    <div class="container">
+      <div class="row">
+        <h1 class="section-title"> RESERVAS - A.G VUELOS</h1>
+      </div>
+      <div class="row">
+        <div id="menu1" class="col-xs-12 col-md-6 col-lg-4">
+          <div class="about-item">
+            <div class="about-text">
+              <h3><a>Consultar Vuelos</a></h3>
+              <p>Consulte los vuelos y horarios disponibles</p>
+              <a class="btn btn-common btn-rm" href="#" onclick="app.mostrarVuelos();">Consultar</a>
+            </div>
+          </div>
+        </div>
+        <div id="menu2" class="col-xs-12 col-md-6 col-lg-4">
+          <div class="about-item">
+            <div class="about-text">
+              <h3><a>Consultar Reservas</a></h3>
+              <p>Consulte sus reservas por número de cédular</p>
+              <input id="docConsulta" class="mb-20 form-control" name="cedula" placeholder="Ingresa tu número de cédula">
+              <a class="btn btn-common btn-rm" href="#" onclick="app.consultarReserva();">Consultar</a>
+            </div>
+          </div>
+        </div>
+        <div id="campodoc" style="display: none;">
+          <form action="javascript:void(0);" method="POST" id="reserva-edit">
+            <p id="datosvuelo"></p>
+            <input type="text" id="documento" placeholder="Cedula de Ciudadania">
+            <input type="submit" value="Reservar" />
+          </form>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <table>
+              <tbody id="vuelos"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <br>
+      <a id="btnback" style="display: none;" href="#" class="btn btn-common btn-rm" onclick="app.Volver();">Volver</a>
+    </div>
+  </section>
+  
+<br><br><br><br><br><br><br>
+    <section class="contenedor" id="servicio">
+      <h2 class="subtitulo">Todo lo que necesitas saber</h2>
+      <div class="contenedor-servicio">
+        <img src="img/avion.jpg" alt="">
+        <div class="checklist-servicio">
+          <div class="service">
+            <h3 class="n-service"><span class="number">1 </span>¿Por qué hospedarte en un hotel?</h3>
+            <p>En un hotel tienes cero preocupaciones. Disfruta dejar en las manos de otros la limpieza, el orden y,
+              en algunos casos, incluso una o más comidas. Generalmente son muy seguros y poseen varias formas de pago.
+              Además,
+              los hoteles suelen contar con servicios extra que pueden serte útiles para tu viaje, como traslado al
+              aeropuerto, estacionamiento, restaurante, entre otros.</p>
+          </div>
+          <div class="service">
+            <h3 class="n-service"><span class="number">2 </span>Ventajas de otros alojamientos</h3>
+            <p>En un alojamiento, como un apartamento, puedes sentirte como en casa y, al mismo tiempo, vivir como un
+              local.
+              Disfruta la libertad de moverte como quieras, en cualquier momento del día. Coordina con el anfitrión la
+              entrega de la llave, y haz del lugar, tu hogar.
+              Los alojamientos suelen ser más económicos que los hoteles para hospedarse varios días en una misma
+              ciudad.</p>
+          </div>
+          <div class="service">
+            <h3 class="n-service"><span class="number">3 </span>¿Qué me conviene según mi destino?</h3>
+            <p>Si buscas relajarte y no preocuparte por nada, o viajas por pocos días, quizá te convenga hospedarte en
+              un hotel. Si te quedas más tiempo en el destino y te gusta disfrutar de la libertad de hacer tus propios
+              planes, los alojamientos, como apartamentos o casas, son ideales.
+              Compara las ventajas y desventajas de los hoteles y los alojamientos, y elige el que más te guste.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    
+
+    <h2 class="top">Top destinos mas buscados</h2>
+  
+
+    <div class="slider-frame">
+        <ul>
+            <li class="til">MEDELLIN-COLOMBIA<img src="img/col.jpg" alt=""></li>
+            <li class="til">PARIS-FRANCIA<img src="img/fran.jpg" alt=""></li>
+            <li class="til">VENECIA-ITALIA<img src="img/ital.jpg " alt=""></li>
+            <li class="til">TEOTIHUACAN-MEXICO<img src="img/mex.jpg" alt=""></li>
+        </ul>
+    </div>
+    </ul>
+
+    
+
+    <br> <br>
+    </section>
+    <section class="gallery" id="portafolio">
+      <div class="contenedor">
+        
+        <br><br>
+        <h2>Los miembros tienen acceso a increíbles tarifas y ofertas</h2>
+        <br>
+        <p>Regístrate para recibir recomendaciones personalizadas y ofertas exclusivas.</p>
+        <br>
+        <div class="regi">
+          <label for="inputEmail4" class="form-label">escribe tu correo </label>
+          <input type="email" class="form-control" id="inputEmail4">
+        </div>
+        <div class="col-123">
+          <button type="submit" class="rg">Registrarse </button>
+        </div>
+      
+
+      </div>
+    </section>
+    <h2>Las 9 ciudades más populares</h2>
+    <div class="content-all">
+        <div class="content-carrousel">
+            <figure><img src="img/argentina.jpg"></figure>
+            <figure><img src="img/berlin.jpg"></figure>
+            <figure><img src="img/cali.jpg"></figure>
+            <figure><img src="img/col.jpg"></figure>
+            <figure><img src="img/españa.jpg"></figure>
+            <figure><img src="img/fran.jpg"></figure>
+            <figure><img src="img/ital.jpg"></figure>
+            <figure><img src="img/mex.jpg"></figure>
+            <figure><img src="img/miami.jpg"></figure>
+            <figure><img src="img/seis.jpg"></figure>
+        </div>
+    </div>
+
+<br><br><br><br><br>
+    <section class="contenedor" id="expertos">
+      <h2 class="subtitulo">...</h2>
+      <section class="expertos">
+        <div class="cont-expert">
+          <img src="img/relajado.svg" alt="">
+          <h3 class="n-expert">ESTAMOS LISTOS CUANDO TU ESTES LISTO </h3>
+          <p>Consulta a dónde puedes viajar ahora y encuentra las mejores
+            ofertas entre miles de opciones de vuelos, hoteles y renta de autos</p>
+        </div>
+        <div class="cont-expert">
+          <img src="img/plan.svg" alt="">
+          <h3 class="n-expert">PLANEA CON SEGURIDAD </h3>
+          <p>Mantente un paso adelante con las últimas noticias sobre viajes, cancelaciones sin costo de hoteles
+            y autos, y seguros de viaje con cobertura por COVID-19.</p>
+        </div>
+        <div class="cont-expert">
+          <img src="img/estatua.svg" alt="">
+          <h3 class="n-expert">VIAJA SIN COMPLICACIONES </h3>
+          <p>Sin tarifas ni cargos ocultos y sin trucos. Con nosotros siempre sabrás exactamente a dónde va tu dinero.
+            Así que olvídate de las preocupaciones y relájate antes de que empiece tu viaje.</p>
+        </div>
+      </section>
+    </section>
+
+
+  </main>
+
+  <footer id="contacto">
+    <div class="contenedor-footer">
+      <h2 class="brand">SofJN Calidad al programar | A.G Vuelos S.A.S 2022 | 108-4090234 | <i
+          class="fa-solid fa-plane"></i> </h2>
+
+
+      <div class="red">
+        <a href="./" class="social-media-icon">
+          <i class='bx bxl-facebook'></i>
+        </a>
+
+        <a href="./" class="social-media-icon">
+          <i class='bx bxl-twitter'></i>
+        </a>
+
+        <a href="./" class="social-media-icon">
+          <i class='bx bxl-instagram'></i>
+        </a>
+      </div>
+    </div>
+
+  </footer>
+</body>
+
+</html>
