@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/2f445145ab.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A.G Vuelos</title>
+</head>
+<body> 
+    
+    
+    <nav>
+        <div class="titulo">
+            <h1 class="titu">A.G VUELOS</h1>
+            <img src="img/A.G VUELOS.png"  class="logo">
+        
+        </div>
+        <ul>
+            <li><i class="fa-solid fa-house"></i><a   href="index.html">Inicio</a></li>
+            <li><i class="fa-solid fa-cart-flatbed-suitcase"></i><a href="alojamiento.html">Reservas</a></li>
+            <li><i class="fa-solid fa-sack-dollar"></i><a href="descuentos.html">Descuentos</a></li>
+            <li><i class="fa-solid fa-user-gear"></i><a href="indexCliente.html">Ayuda</a></li>
+            <li><h3><i class="fa-solid fa-user-lock"></i><a class="active" href="iniciosession.html">Iniciar Sesion</a></h3></li>
+        </ul>   
+        
+       
+            
+    </nav>
+
+    <main>
+        <div class="main">
+            <br><form class="formulario">
+                <p class="reser">Reservas</p>
+                <div class="col-md-4">
+                    <label for="inputOrigen" class="form-label"></label>
+                    <select id="inputOrigen" class="form-selecto">
+                        <option selected>Origen...</option>
+                        <option>colombia</option>
+                        <option>mexico</option>
+                        <option>francia</option>
+                        <option>italia</option>
+                        <option>Suiza</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label for="inputDestino" class="form-label"></label>
+                    <select id="inputDestino" class="form-select">
+                        <option selected>Destino...</option>
+                        <option>colombia</option>
+                        <option>mexico</option>
+                        <option>francia</option>
+                        <option>italia</option>
+                    </select>
+                </div>
+                <div class="col-12">
+                    <label for="fecha" class="form-label"></label>
+                    <input type="date" class="form-control" placeholder="Ida" id="fecha">
+                </div>
+               <div class="col-12">
+                    <label for="inputSalida" class="form-label"></label>
+                    <input type="date" class="form-control" id="inputSalida" placeholder="Salida">
+                </div>
+                <div class="col-12">
+                    <label for="inputSalida" class="form-label"></label>
+                    <input type="number" class="form-control" id="inputOcupantes" placeholder="Ocupantes">
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="b"> <a href="alojamiento.html">Buscar</button></a>
+                </div>
+            </form></br>
+        </div>
+        
+    </main>
+    <main>
+        <section class="informacion">
+            <h2 class="destino">Destinos mas buscados</h2>
+            <div class="imagenes-inicio">
+                <img src="img/uno.jpg" alt="" class="img-inicio">
+                <img src="img/dos.jpg" alt="" class="img-inicio">
+                <img src="img/tres.jpg" alt="" class="img-inicio">
+                <img src="img/cuatro.jpg" alt="" class="img-inicio">
+                <img src="img/cinco.jpg" alt="" class="img-inicio">
+                <img src="img/seis.jpg" alt=""class="img-inicio">
+            </div>
+        </section>
+    </main>
+    <h2 class="j">Aprende mas sobre nosotros</h2>
+    <div class="nosotros">
+        <div class="quienes">
+            <img src="img/quienes.jpeg">
+            <h2>Quienes somos</h2>
+            <p>Somos una agencia internacional de vuelos, dedicada al sector turistico y transporte de personas a
+                distintos lugares del mundo donde manejamos unas tarifas bajas para el acceso a cualquier persona
+            </p>
+            <a href="#">leer mas..</a>
+        </div>
+        <div class="quienes">
+            <img src="img/que.jpeg">
+            <h2>Porque comprar en A.G VUELOS.</h2>
+            <p>Porque somos una agencia de viajes que con tan solo una busqueda encontar la mejor tarifa en alojamiento,
+                descuentos y paquetes.
+            </p>
+            <a href="#">leer mas..</a>
+        </div>
+        <div class="quienes">
+            <img src="img/atencion.jpeg">
+            <h2>Atencion.</h2>
+            <p>tenemos una atencion personalizada, te ofrecemos asistencia al cliente via facebook, twitter e instagram
+                donde
+                podras contactarnos a cualquier horas del dia.
+            </p>
+            <a href="#">leer mas..</a>
+        </div>
+    </div>
+    <footer id="contacto">
+        <div class="contenedor-footer">
+            <h2 class="brand">SofJN Calidad al programar | A.G Vuelos S.A.S 2022 | 108-4090234 | <i class="fa-solid fa-plane"></i> </h2>
+                
+           
+            <div class="red">
+                  <a href="./" class="social-media-icon">
+                    <i class='bx bxl-facebook'></i>
+                </a>
+        
+                <a href="./" class="social-media-icon">
+                    <i class='bx bxl-twitter' ></i>
+                </a>
+            
+                <a href="./" class="social-media-icon">
+                    <i class='bx bxl-instagram' ></i>
+                </a>
+            </div>
+        </div>
+
+    </footer>
+    
+</body>
+</html>
